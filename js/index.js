@@ -23,7 +23,7 @@ async function loadQuote() {
   const textEl   = document.getElementById('quote-text');
   const authorEl = document.getElementById('quote-author');
   try {
-    const res  = await fetch('https://api.quotable.io/quotes/random?tags=education|success|wisdom');
+    const res  = await fetch('http://api.quotable.io/quotes/random?tags=education|success|wisdom');
     const data = await res.json();
     textEl.textContent   = data[0].content;
     authorEl.textContent = '— ' + data[0].author;
